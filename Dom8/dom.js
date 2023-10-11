@@ -13,6 +13,7 @@ itemList.addEventListener('click', removeItem); //REMOVE ITEM
 function addItem(e){  
     e.preventDefault();
 
+    //add newItem
     let newItem = document.getElementById('item').value; //NEW ITEM-VALUE ADD
     //create new Li element
     let li = document.createElement('li');
@@ -33,10 +34,9 @@ function addItem(e){
     li.appendChild(deleteBtn);
 
     //Add edit button for newItem
-    //<!--2. Now add an edit button next to the delete icon.[Dont have to build the Edit  functionality, just add the button] -->
-    //create delete button element X to newItem
+    //2. Now add an edit button next to the delete icon.[Dont have to build the Edit  functionality, just add the button]     
     let EditBtn = document.createElement('button');
-    //add classes to del button
+    //add classes to edit button
     EditBtn.className = 'btn btn-dark float-right edit';
     //append text node
     EditBtn.appendChild(document.createTextNode('Edit'));
