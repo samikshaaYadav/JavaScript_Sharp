@@ -4,13 +4,11 @@ let form = document.getElementById('addForm'); //TO WRITE NAME OF LI IN FORM
 let itemList = document.getElementById('items'); // TO ADD IN ITEMlIST
 
 
-
 //ADD LISTENER TO ADD ITEM WHEN CLICK ON SUBMIT BUTTON
 form.addEventListener('submit',addItem);  //ADD ITEM
 
 //REMOVE LISTENER APPLIED ON RED CROSS SIGN  
 itemList.addEventListener('click', removeItem); //REMOVE ITEM
-
 
 function addItem(e){  
     e.preventDefault();
@@ -24,18 +22,30 @@ function addItem(e){
     //add text node with input value
     li.appendChild(document.createTextNode(newItem));
 
-    //create delete button element X to newItem
+    
+    //Add delete button element X for newItem
     let deleteBtn = document.createElement('button');
     //add classes to del button
     deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
     //append text node
     deleteBtn.appendChild(document.createTextNode('X'));
-
     //append button to li
     li.appendChild(deleteBtn);
 
+    //Add edit button for newItem
+    //<!--2. Now add an edit button next to the delete icon.[Dont have to build the Edit  functionality, just add the button] -->
+    //create delete button element X to newItem
+    let EditBtn = document.createElement('button');
+    //add classes to del button
+    EditBtn.className = 'btn btn-dark float-right edit';
+    //append text node
+    EditBtn.appendChild(document.createTextNode('Edit'));
+    //append button to li   
+    li.appendChild(EditBtn);
+
     itemList.appendChild(li); //NEW ELEMENT ADDED
 }
+
 //TO DELETE ANY ELEMENT USING RED-CROSS SIGN
 //REMOVE ITEM
 //------------
@@ -49,5 +59,3 @@ function removeItem(e){
         }
     }
 }
-
-//2. is on index.html where edit button to add
