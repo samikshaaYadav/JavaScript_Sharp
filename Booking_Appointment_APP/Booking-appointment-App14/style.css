@@ -16,6 +16,7 @@
     margin: 5px 0;
   }
   header {
+    color: black;
     background: #66f3d9;
     padding: 1rem;
     text-align: center;
@@ -28,7 +29,7 @@
   }
   #my-form {
     padding: 2rem;
-    background: #f4f4f4;
+    background: #d3d1d1;
   }
   #my-form label {
     display: block;
@@ -45,13 +46,13 @@
     width: 100%;
     padding: 10px 15px;
     border: 0;
-    background: #333;
+    background: #0ec95c;
     color: #fff;
     border-radius: 5px;
     margin: 5px 0;
   }
   .btn:hover {
-    background: #444;
+    background: #da301d;
   }
   .bg-dark {
     background: #333;
