@@ -1,3 +1,5 @@
+//Write logic to store the details entered by the user in the local storage when he clicks on submit
+
 let myForm = document.getElementById('my-form');
 let msg = document.querySelector('.msg');
 let nameInput = document.getElementById('name');
