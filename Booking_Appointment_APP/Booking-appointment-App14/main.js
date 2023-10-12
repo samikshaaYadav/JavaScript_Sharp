@@ -55,8 +55,8 @@ function onSubmitDisplay(e){
     let deleteBtn = document.createElement('input');
     deleteBtn.type = 'button';
     deleteBtn.value = "Delete";  //creating delete button
-    deleteBtn.style.color = 'black';
-    deleteBtn.style.backgroundColor = 'grey';
+    deleteBtn.style.color = 'white';
+    deleteBtn.style.backgroundColor = 'red';
 
     deleteBtn.onclick = () => {
         localStorage.removeItem(name);   //particular user
@@ -69,7 +69,7 @@ function onSubmitDisplay(e){
     editBtn.type = 'button';
     editBtn.value = "Edit";  //creating delete button
     editBtn.style.color = 'black';
-    editBtn.style.backgroundColor = 'grey';
+    editBtn.style.backgroundColor = 'skyblue';
 
     editBtn.onclick = () => {
         localStorage.removeItem(name);   //particular user
