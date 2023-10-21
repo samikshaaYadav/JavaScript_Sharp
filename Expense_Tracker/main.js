@@ -45,32 +45,31 @@ function onSubmitDisplay(user)
     let li = document.createElement('li');
     let details = document.createTextNode(`${amount.value} - ${description.value} - ${category.value}`);
 
-//TO ADD DELETE BUTTON
-let deleteBtn = document.createElement('input');
-deleteBtn.type = 'button';
-deleteBtn.value = "Delete";  //creating delete button
-deleteBtn.style.color = 'white';
-deleteBtn.style.backgroundColor = 'red';
+    //TO ADD DELETE BUTTON Functionailty
+    let deleteBtn = document.createElement('input');
+    deleteBtn.type = 'button';
+    deleteBtn.value = "Delete";  //creating delete button
+    deleteBtn.style.color = 'white';
+    deleteBtn.style.backgroundColor = 'red';
 
-deleteBtn.onclick = () => {
-    localStorage.removeItem(user.amount + "-" + user.description + "-" + user.category);   //particular user
-    list.removeChild(li);
-}
+    deleteBtn.onclick = () => {
+        localStorage.removeItem(user.amount + "-" + user.description + "-" + user.category);   //particular user
+        list.removeChild(li);
+    }
+    //TO EDIT BUTTON Functionailty
+    const editBtn = document.createElement('input');
+    editBtn.type = "button";
+    editBtn.value = "Edit";
+    editBtn.style.color = 'black';
+    editBtn.style.backgroundColor = 'skyblue';
 
-//Adding Edit Button and Functionailty
-const editBtn = document.createElement('input');
-editBtn.type = "button";
-editBtn.value = "Edit";
-editBtn.style.color = 'black';
-editBtn.style.backgroundColor = 'skyblue';
-
-editBtn.onclick = () => {
-    localStorage.removeItem(user.amount + "-" + user.description + "-" + user.category);
-    list.removeChild(li);
-    document.getElementById('amount').value = user.amount;
-    document.getElementById('description').value = user.description;
-    document.getElementById('category').value = user.category;
-}
+    editBtn.onclick = () => {
+        localStorage.removeItem(user.amount + "-" + user.description + "-" + user.category);
+        list.removeChild(li);
+        document.getElementById('amount').value = user.amount;
+        document.getElementById('description').value = user.description;
+        document.getElementById('category').value = user.category;
+    }
     li.appendChild(details);
     li.appendChild(deleteBtn);
     li.appendChild(editBtn);
@@ -84,6 +83,3 @@ editBtn.onclick = () => {
     description.value = '';
     category.value = '';
 }
-
-
-
